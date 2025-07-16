@@ -1,9 +1,19 @@
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/router";
 
-export default function Home() {
+export default function HomePage() {
+  const router = useRouter();
+
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "#111", color: "#fff" }}>
-      <h1 style={{ fontSize: "3rem", fontWeight: "bold" }}>🎸 Welcome to BandSwapHub</h1>
-      <p style={{ marginTop: "1rem", fontSize: "1.2rem" }}>Visit /register to sign up your band</p>
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8 text-center">
+      <h1 className="text-5xl font-bold mb-4">🎸 Welcome to BandSwapHub</h1>
+      <p className="text-xl mb-8 max-w-2xl">
+        A global platform for musicians to swap gigs, grow audiences, and connect by genre and location.
+      </p>
+      <div className="space-y-4">
+        <Button onClick={() => router.push("/register")}>Register Your Band</Button>
+        <Button variant="outline" onClick={() => router.push("/app")}>Enter App</Button>
+      </div>
     </div>
   );
 }
