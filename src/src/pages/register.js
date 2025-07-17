@@ -12,15 +12,15 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8">
-      <h1 className="text-4xl font-bold mb-6">🎸 Register Your Band</h1>
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 text-center">
+      <h1 className="text-4xl font-bold mb-4">Register Your Band</h1>
       <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md">
         <input
           type="text"
           placeholder="Band Name"
           value={bandName}
           onChange={(e) => setBandName(e.target.value)}
-          className="w-full p-2 rounded text-black"
+          className="w-full px-4 py-2 rounded text-black"
           required
         />
         <input
@@ -28,7 +28,7 @@ export default function RegisterPage() {
           placeholder="Genre"
           value={genre}
           onChange={(e) => setGenre(e.target.value)}
-          className="w-full p-2 rounded text-black"
+          className="w-full px-4 py-2 rounded text-black"
           required
         />
         <input
@@ -36,7 +36,7 @@ export default function RegisterPage() {
           placeholder="Location"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
-          className="w-full p-2 rounded text-black"
+          className="w-full px-4 py-2 rounded text-black"
           required
         />
         <Button type="submit" className="w-full">Register</Button>
