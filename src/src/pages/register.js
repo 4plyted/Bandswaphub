@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 
 export default function RegisterPage() {
   const [bandName, setBandName] = useState("");
@@ -39,7 +38,12 @@ export default function RegisterPage() {
           className="w-full px-4 py-2 rounded text-black"
           required
         />
-        <Button type="submit" className="w-full">Register</Button>
+        <button
+          type="submit"
+          className="w-full px-4 py-2 bg-blue-600 text-white rounded"
+        >
+          Register
+        </button>
       </form>
     </div>
   );
