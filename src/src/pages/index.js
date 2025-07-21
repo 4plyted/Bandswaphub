@@ -1,8 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-
 export default function HomePage() {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8 text-center">
@@ -11,8 +11,8 @@ export default function HomePage() {
         A global platform for musicians to swap gigs, grow audiences, and connect by genre and location.
       </p>
       <div className="space-y-4">
-        <Button onClick={() => router.push("/register")}>Register Your Band</Button>
-        <Button variant="outline" onClick={() => router.push("/app")}>Enter App</Button>
+        <Button onClick={() => navigate("/register")}>Register Your Band</Button>
+        <Button variant="outline" onClick={() => navigate("/app")}>Enter App</Button>
       </div>
     </div>
   );
